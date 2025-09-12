@@ -59,6 +59,8 @@ const ProjectsGallery: React.FC = () => {
       category: 'frontend',
       tags: ['React', 'TypeScript', 'Tailwind'],
       image: dashboardImage,
+      liveUrl: 'https://dashboard-gamma-gules-64.vercel.app/',
+      githubUrl: 'https://github.com/Komal290106/Dashboard',
     },
     {
       id: 5,
