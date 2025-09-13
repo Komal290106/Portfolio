@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ExternalLink, Github, Filter } from 'lucide-react';
 import netflixImage from '../assets/netflix_clone.png';
 import uamoreImage from '../assets/uamore.png';
-import movieBookingImage from '../assets/movie_booking.png';
+import nimbusImage from '../assets/nimbus.png';
 import dashboardImage from '../assets/dashboard.png';
 import masalaTalesImage from '../assets/masala_tales.png';
 import codeSplineImage from '../assets/codespline.png';
@@ -44,14 +44,16 @@ const ProjectsGallery: React.FC = () => {
       githubUrl: 'https://github.com/Komal290106/Uamore',
     },
     {
-      id: 3,
-      title: 'Movie Booking App',
-      description:
-        'Full-stack booking system with seat selection and ticket management.',
-      category: 'fullstack',
-      tags: ['React', 'TypeScript', 'Tailwind', 'Express'],
-      image: movieBookingImage,
-    },
+  id: 3,
+  title: "Nimbus Keyboards",
+  description: "Premium landing page for mechanical keyboards.",
+  category: "experiments",
+  tags: ["Next.js", "TypeScript", "Tailwind", "GSAP", "Three.js", "Slice Machine"],
+  image: nimbusImage, 
+  liveUrl: "https://nimbus-keyboard.vercel.app/",
+  githubUrl: "https://github.com/Komal290106/nimbus-keyboard",
+},
+
     {
       id: 4,
       title: 'Student Dashboard',

@@ -45,7 +45,7 @@ const timelineItems: TimelineItem[] = [
     description: 'Expanding skills to backend and full-stack projects',
     details: [
       'Netflix Clone – full-stack project using React + Firebase',
-      'Movie Ticket Booking App – full-stack project with React and database integration',
+      'Nimbus Keyboards – premium landing page with animations and 3D effects',
       'Learning APIs, database connections, and deployment strategies'
     ],
     icon: <Rocket className="w-6 h-6" />,
