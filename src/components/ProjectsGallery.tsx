@@ -44,13 +44,23 @@ const ProjectsGallery: React.FC = () => {
       githubUrl: 'https://github.com/Komal290106/Uamore',
     },
     {
-      id: 3,
-      title: 'Movie Booking App',
-      description:
-        'Full-stack booking system with seat selection and ticket management.',
-      category: 'fullstack',
-      tags: ['React', 'TypeScript', 'Tailwind', 'Express'],
-      image: movieBookingImage,
+       id: 3,
+    title: "Nimbus Keyboards",
+    description:
+      "Premium landing page for mechanical keyboards.",
+    category: "frontend",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind",
+      "GSAP",
+      "Three.js",
+      "Slice Machine",
+    ],
+    image: nimbusImage, 
+    liveUrl: "https://nimbus-keyboard.vercel.app/",
+    githubUrl: "https://github.com/Komal290106/nimbus-keyboard",
+  },
     },
     {
       id: 4,
