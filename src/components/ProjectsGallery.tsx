@@ -40,7 +40,7 @@ const ProjectsGallery: React.FC = () => {
       category: 'frontend',
       tags: ['HTML', 'CSS', 'JavaScript', 'Tailwind'],
       image: uamoreImage,
-      liveUrl: 'https://code-spline-rouge.vercel.app',
+      liveUrl: 'https://uamore-phi.vercel.app/',
       githubUrl: 'https://github.com/Komal290106/Uamore',
     },
     {
@@ -61,6 +61,8 @@ const ProjectsGallery: React.FC = () => {
       category: 'frontend',
       tags: ['React', 'TypeScript', 'Tailwind'],
       image: dashboardImage,
+      liveUrl: 'https://dashboard-gamma-gules-64.vercel.app/',
+      githubUrl: 'https://github.com/Komal290106/Dashboard',
     },
     {
       id: 5,
