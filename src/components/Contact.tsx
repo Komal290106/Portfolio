@@ -20,15 +20,29 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
+
+    try {
+      const response = await fetch("https://formspree.io/f/xovnzqzl", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setFormData({ name: "", email: "", message: "" });
+        setShowConfetti(true);
+        setTimeout(() => setShowConfetti(false), 3000);
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      alert("Failed to send. Check your internet connection.");
+    } finally {
       setIsSubmitting(false);
-      setShowConfetti(true);
-      setFormData({ name: '', email: '', message: '' });
-      
-      setTimeout(() => setShowConfetti(false), 3000);
-    }, 1500);
+    }
   };
 
   const contactInfo = [
@@ -124,31 +138,30 @@ const Contact: React.FC = () => {
               ))}
             </div>
 
-{/* Social Links */}
-<div className="pt-8 border-t border-mint/20 dark:border-purple-500/20">
-  <h4 className="font-outfit font-semibold text-charcoal dark:text-white mb-4">
-    Connect with me
-  </h4>
-  <div className="flex space-x-4">
-    <a
-      href="https://github.com/Komal290106"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group p-4 bg-gradient-to-r from-mint to-teal-400 text-white rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
-    >
-      <Github className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
-    </a>
-    <a
-      href="https://www.linkedin.com/in/komal-kaur-dhillon-59149a330"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group p-4 bg-gradient-to-r from-lilac to-purple-400 text-white rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
-    >
-      <Linkedin className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
-    </a>
-  </div>
-</div>
-
+            {/* Social Links */}
+            <div className="pt-8 border-t border-mint/20 dark:border-purple-500/20">
+              <h4 className="font-outfit font-semibold text-charcoal dark:text-white mb-4">
+                Connect with me
+              </h4>
+              <div className="flex space-x-4">
+                <a
+                  href="https://github.com/Komal290106"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group p-4 bg-gradient-to-r from-mint to-teal-400 text-white rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                >
+                  <Github className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/komal-kaur-dhillon-59149a330"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group p-4 bg-gradient-to-r from-lilac to-purple-400 text-white rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                >
+                  <Linkedin className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Right: Contact Form */}
