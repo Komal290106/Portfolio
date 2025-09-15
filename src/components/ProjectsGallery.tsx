@@ -72,6 +72,8 @@ const ProjectsGallery: React.FC = () => {
       category: 'frontend',
       tags: ['React', 'TypeScript', 'Tailwind'],
       image: masalaTalesImage,
+      liveUrl: 'https://masala-tales.vercel.app/',
+      githubUrl: 'https://github.com/Komal290106/masala_tales',
     },
     {
       id: 6,
