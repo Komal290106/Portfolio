@@ -30,6 +30,7 @@ const ProjectsGallery: React.FC = () => {
       category: 'fullstack',
       tags: ['React', 'Firebase', 'Vite', 'CSS'],
       image: netflixImage,
+      liveUrl: 'https://netflix-clone-one-peach-43.vercel.app/',
       githubUrl: 'https://github.com/Komal290106/Netflix_Clone',
     },
     {
