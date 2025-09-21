@@ -1,5 +1,5 @@
 import React from 'react';
-import myPortrait from "../assets/image.jpg";
+import aboutIllustration from "../assets/about_me.svg";
 
 const About: React.FC = () => {
   return (
@@ -13,30 +13,22 @@ const About: React.FC = () => {
           <div className="w-20 h-1 bg-gold mx-auto"></div>
         </div>
 
-        {/* Editorial Spread Layout */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-          {/* Left: Portrait with Frame */}
+        {/* Editorial Spread Layout - updated for centering and no tilt */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left: Illustration - now centered and upright */}
           <div className="relative">
             <div className="relative max-w-md mx-auto">
               {/* Decorative Frames */}
               <div className="absolute -inset-3 bg-gradient-to-br from-gold/30 to-lilac/30 rounded-2xl transform rotate-2"></div>
               <div className="absolute -inset-3 bg-gradient-to-tl from-mint/30 to-gold/30 rounded-2xl transform -rotate-1"></div>
 
-              {/* Portrait */}
-              <div className="relative bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transform rotate-1">
+              {/* Illustration - removed transform rotate class */}
+              <div className="relative bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg flex items-center justify-center h-72">
                 <img
-                  src={myPortrait}
-                  alt="Portrait of Komal, a developer and designer"
-                  className="w-full h-72 object-cover"
+                  src={aboutIllustration}
+                  alt="Creative developer illustration"
+                  className="w-3/4 h-auto"
                 />
-                <div className="p-4 text-center">
-                  <p className="font-playfair text-lg font-semibold text-charcoal dark:text-white">
-                    Komal 👋
-                  </p>
-                  <p className="font-outfit text-sm text-charcoal/70 dark:text-white/70">
-                    Developer & Designer
-                  </p>
-                </div>
               </div>
             </div>
           </div>
@@ -46,39 +38,38 @@ const About: React.FC = () => {
             {/* Pull Quote */}
             <div className="mb-6 p-6 bg-gradient-to-r from-lilac/10 to-mint/10 dark:from-purple-500/10 dark:to-teal-500/10 rounded-lg border-l-4 border-gold">
               <blockquote className="font-playfair text-xl lg:text-2xl font-semibold text-charcoal dark:text-white italic">
-                "Code is where creativity meets logic."
+                "Code is my canvas, design is my color."
               </blockquote>
             </div>
 
             {/* Main Text */}
             <div className="space-y-4 font-outfit text-charcoal/80 dark:text-white/80 leading-relaxed">
               <p className="text-base lg:text-lg">
-                Welcome to my digital playground! I'm a passionate developer and designer who loves crafting
-                experiences that look stunning and work seamlessly. What started as simple curiosity quickly
-                grew into a genuine love for turning ideas into digital realities.
+                Hi, I’m Komal! I love blending creativity with code to bring ideas
+                to life on the web. For me, building isn’t just about function—it’s
+                about making things that feel good to use and fun to explore.
               </p>
 
               <p className="text-base lg:text-lg">
-                Currently studying and diving deeper into the world of web development, I've built everything
-                from sleek e-commerce platforms to interactive web apps. Each project pushes me to learn, adapt,
-                and explore the endless creativity that code allows.
+                I’ve been learning and experimenting in web dev for a little over a year now,
+                and I’ve worked on projects ranging from simple apps to full websites.
+                Each project is like a new adventure where I get to try, break, and create.
               </p>
 
               <p className="text-base lg:text-lg">
-                When I'm not coding, you'll probably find me exploring design trends, experimenting with new tools,
-                or sketching the next big idea that challenges my skills. I believe the most impactful digital
-                experiences happen when technical precision meets thoughtful design.
+                Outside the screen, you’ll probably catch me playing with design ideas,
+                sketching random concepts, or chasing the next “aha!” moment that inspires my work.
               </p>
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 mt-8 pt-6 border-t border-mint/30 dark:border-purple-500/20">
               <div className="text-center">
-                <div className="font-playfair text-2xl lg:text-3xl font-bold text-gold">15+</div>
+                <div className="font-playfair text-2xl lg:text-3xl font-bold text-gold">10+</div>
                 <div className="font-outfit text-xs lg:text-sm text-charcoal/70 dark:text-white/70 mt-1">Projects</div>
               </div>
               <div className="text-center">
-                <div className="font-playfair text-2xl lg:text-3xl font-bold text-mint dark:text-teal-400">2+</div>
+                <div className="font-playfair text-2xl lg:text-3xl font-bold text-mint dark:text-teal-400">1+</div>
                 <div className="font-outfit text-xs lg:text-sm text-charcoal/70 dark:text-white/70 mt-1">Years Learning</div>
               </div>
               <div className="text-center">
