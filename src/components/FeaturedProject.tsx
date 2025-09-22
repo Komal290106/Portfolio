@@ -18,24 +18,25 @@ const FeaturedProject: React.FC = () => {
         </div>
 
         {/* Video */}
-        <div className="flex justify-center mb-16">
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl w-full lg:w-[850px] h-[450px]">
-            <video
-              src={videoSrc}
-              className="w-full h-full object-cover rounded-2xl"
-              autoPlay
-              loop
-              muted
-              playsInline
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-transparent via-gold/10 to-transparent pointer-events-none rounded-2xl"></div>
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center">
-              <p className="font-outfit text-sm text-charcoal/60 dark:text-white/60">
-                Full project demo – watch how the application flows
-              </p>
-            </div>
-          </div>
-        </div>
+<div className="flex justify-center mb-16 px-4">
+  <div className="relative rounded-2xl overflow-hidden shadow-2xl w-full max-w-4xl aspect-video">
+    <video
+      src={videoSrc}
+      className="w-full h-full object-cover rounded-2xl"
+      autoPlay
+      loop
+      muted
+      playsInline
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-transparent via-gold/10 to-transparent pointer-events-none rounded-2xl"></div>
+    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center">
+      <p className="font-outfit text-xs sm:text-sm text-charcoal/60 dark:text-white/60">
+        Full project demo – watch how the application flows
+      </p>
+    </div>
+  </div>
+</div>
+
 
         {/* Description & Features below video */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
