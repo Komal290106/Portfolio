@@ -1,5 +1,5 @@
 import React from 'react';
-import aboutIllustration from "../assets/about_me.svg";
+import aboutIllustration from "../assets/about_bg.png";
 
 const About: React.FC = () => {
   return (
@@ -13,25 +13,33 @@ const About: React.FC = () => {
           <div className="w-20 h-1 bg-gold mx-auto"></div>
         </div>
 
-        {/* Editorial Spread Layout - updated for centering and no tilt */}
+        {/* Layout */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left: Illustration - now centered and upright */}
-          <div className="relative">
-            <div className="relative max-w-md mx-auto">
-              {/* Decorative Frames */}
-              <div className="absolute -inset-3 bg-gradient-to-br from-gold/30 to-lilac/30 rounded-2xl transform rotate-2"></div>
-              <div className="absolute -inset-3 bg-gradient-to-tl from-mint/30 to-gold/30 rounded-2xl transform -rotate-1"></div>
+          {/* Left: Illustration */}
+<div className="relative flex justify-center">
+ <div className="relative flex justify-center">
+  {/* Background Blob */}
+  <div
+    className="
+      absolute w-72 h-72 rounded-full blur-3xl 
+      bg-gradient-to-tr from-mint/40 to-lilac/40 
+      dark:from-mint/20 dark:to-lilac/20
+    "
+  ></div>
 
-              {/* Illustration - removed transform rotate class */}
-              <div className="relative bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg flex items-center justify-center h-72">
-                <img
-                  src={aboutIllustration}
-                  alt="Creative developer illustration"
-                  className="w-3/4 h-auto"
-                />
-              </div>
-            </div>
-          </div>
+  {/* Ground Shadow */}
+  <div className="absolute bottom-0 w-40 h-8 bg-black/20 dark:bg-black/40 rounded-full blur-xl"></div>
+
+  {/* Robot */}
+  <img
+    src={aboutIllustration}
+    alt="Creative developer illustration"
+    className="relative w-full max-w-lg lg:max-w-xl h-auto"
+  />
+</div>
+
+</div>
+
 
           {/* Right: Article Text */}
           <div className="flex flex-col justify-center">
