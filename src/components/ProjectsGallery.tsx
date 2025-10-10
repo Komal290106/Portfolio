@@ -3,7 +3,7 @@ import { ExternalLink, Github, Filter } from 'lucide-react';
 import netflixImage from '../assets/netflix_clone.png';
 import uamoreImage from '../assets/uamore.png';
 import nimbusImage from '../assets/nimbus.png';
-import dashboardImage from '../assets/dashboard.png';
+import ghibliImage from '../assets/ghibli.png';
 import masalaTalesImage from '../assets/masala_tales.png';
 import codeSplineImage from '../assets/codespline.png';
 
@@ -55,16 +55,16 @@ const ProjectsGallery: React.FC = () => {
   githubUrl: "https://github.com/Komal290106/nimbus-keyboard",
 },
 
-    {
-      id: 4,
-      title: 'Student Dashboard',
-      description: 'Frontend dashboard for student management and progress tracking.',
-      category: 'frontend',
-      tags: ['React', 'TypeScript', 'Tailwind'],
-      image: dashboardImage,
-      liveUrl: 'https://dashboard-gamma-gules-64.vercel.app/',
-      githubUrl: 'https://github.com/Komal290106/Dashboard',
-    },
+{
+  id: 4,
+  title: 'Ghibli Fanpage',
+  description: 'A fan-made website celebrating Studio Ghibli movies, timelines, and the magic behind Miyazaki\'s creations.',
+  category: 'frontend',
+  tags: ['HTML', 'CSS'],
+  image: ghibliImage, 
+  liveUrl: 'https://ghibli-jet.vercel.app/',
+  githubUrl: 'https://github.com/Komal290106/Ghibli',
+},
     {
       id: 5,
       title: 'Masala Tales',
